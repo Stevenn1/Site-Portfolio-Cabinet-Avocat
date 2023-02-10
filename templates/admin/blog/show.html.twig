@@ -1,0 +1,223 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/show.css">
+{% endblock %}
+
+{% block title %}Maitre " ADMINISTRATEUR " | Blog : {{ article.title }} {% endblock %}
+
+{% block body %}
+
+
+    <div class="row mt-2">
+        <div class="col-12 p-0 layoutArticle">
+
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-center align-items-center flex-nowrap">
+                    <div class="lineDesign"></div>
+                    <div class="col-8 p-0 articleMediaQuerie">
+
+                        <div class="card mb-3 bgCards p-3">
+                            <div class="card-body">
+                                <h1 class="card-title colorCards">{{ article.title }}</h1>
+
+                                <div class="d-flex align-items-baseline">
+                                    <p class="colorWhite fs-5">Catégorie</p>
+                                    <i class="ms-2 badge rounded-pill bgReply2 fw-normal fs-6">{{ article.category.title}}</i>
+                                </div>
+
+                                <p class="card-text colorCards">
+                                    {{ article.content | raw }}
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">Ecrit le {{ article.createdAt | date('d/m/y')}} à {{ article.createdAt | date('d/m/Y')}} dans la catégorie {{ article.category.title }}</small>
+                                </p>
+
+                                <div class="col-7 d-flex">
+
+                                    <button type="button" class="btn btn-light btn-sm me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                                        <a href="#"> Ajouter un commentaire</a>
+                                    </button>
+
+                                    {# Modal commentaire #}
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Nouveau commentaire</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{form_start(commentForm)}}
+                                                {{ form_row(commentForm.email, {'attr': {'value': app.user.email }})}}
+                                                <div class="mb-4">{{ form_row(commentForm.author,{'attr': {'value': app.user.username }})}}</div>
+                                                <div class="mb-4">{{ form_row(commentForm.content, {'attr': {'placeholder': "Tapez votre message",'id': "message-text"}})}}</div>
+                                                <div class="mb-4">{{ form_row(commentForm.rgpd)}}</div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                {{form_end(commentForm)}}
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-light me-2">
+                                        <a href="{{path('admin_blog_edit', { 'id': article.id}) }}">Modifier</a>
+                                    </button>
+
+                                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    Supprimer
+                                    </button>
+
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Suppression de l'article</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Souhaitez-vous vraiment supprimer l'article ?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+
+                                            <button class="btn btn-danger">
+                                                <a href="{{path('admin_blog_remove', { 'id': article.id}) }}" class="colorWhite">Supprimer</a>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            
+                        </div>
+
+
+                    </div>
+                    <div class="lineDesign"></div>
+                </div>
+
+
+
+                {# Début de la partie commentaire #}
+                <div class="row justify-content-center mb-4 p-auto bgComment" id="comment">
+                    <div class="rounded" id="layoutCommentPart">
+
+                        <section>
+
+                            <h2 class="writeColor text-center text-decoration-underline">Commentaires</h2>
+
+                            <div class="bgComment cardComment">
+                                <div class="ps-4 marginMediaQuerie">
+
+                                    {% for comment in article.comments %}
+                                        {% if comment.parent == null %}
+
+                                            <div class="mt-3 d-flex align-items-baseline">
+
+                                                <div class="pt-2 me-2">
+                                                    <i class="fa-solid fa-circle-user" id="iconStyle"></i>
+                                                </div>
+
+                                                <h4>{{comment.author}} - </h4>
+
+                                                <span class="text-muted ms-2">
+                                                    <small> {{comment.createdAt | date ('d/m/Y à H:i')}} </small>
+                                                </span>
+
+                                            </div>
+
+                                            <p class="colorWhite ps-2 pe-2">
+                                                {{comment.content | raw }}
+                                            </p>
+
+                                            {% if app.user %}
+
+                                                <button type="button" class="btn btn-light btn-sm ms-2 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal"  data-bs-whatever="@mdo">
+                                                    <a href="#" data-reply data-id="{{comment.id}}">Répondre</a>
+                                                </button>
+
+                                                <button type="button" class="btn btn-danger btn-sm ms-2 mb-2">
+                                                    <a href="{{ path('delete_comment', {'id': comment.id}) }}" data-reply >Supprimer</a>
+                                                </button>
+
+                                                <hr>
+
+                                            {% else %}
+
+                                            {% endif %}
+
+                                            {% for reply in comment.replies %}
+                                                <div class="col-8 ps-2 bgReply2 mt-3" id="LayoutReply">
+                                                    <div class="d-flex align-items-baseline">
+                                                        <div class="pt-2 me-2">
+                                                            <i class="fa-solid fa-circle-user" id="iconStyle"></i>
+                                                        </div>
+                                                        <h4>{{reply.author}}</h4>
+                                                        <span class="colorWhite ms-2">
+                                                            <small>{{reply.createdAt | date ('d/m/Y à H:i')}} </small>
+                                                        </span>
+                                                    </div>
+
+                                                    <p class="colorBgNav">
+                                                        {{reply.content | raw }}
+                                                    </p>
+
+                                                    {% if app.user %}
+
+                                                    <button type="button" class="btn btn-light btn-sm me-2 mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal"  data-bs-whatever="@mdo">
+                                                        <a href="#" data-reply data-id="{{comment.id}}">Répondre</a>
+                                                    </button>
+                                                    
+                                                    <div class="col">
+                                                    <form action="{{ path('delete_reply', {'id': reply.id}) }}" class="bgStyle2" method="post" class="p-0">
+                                                        <input type="submit" class="form-control bg-danger border-0 colorWhite" value="Supprimer">
+                                                    </form>
+                                                    </div>
+
+                                                    {% else %}
+
+                                                    {% endif %}
+
+                                                </div>
+                                            {% endfor %}
+
+                                        {% endif %}
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+
+
+                        </section>
+                    </div>
+                </div>
+                {# Fin de la partie commentaire #}
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script>
+    
+        window.onload = () => {
+            document.querySelectorAll("[data-reply]").forEach(element => {
+                element.addEventListener("click", function(){
+                    document.querySelector("#comment_parentid").value = this.dataset.id;
+                });
+            });
+        }
+
+    </script>
+
+{% endblock %}

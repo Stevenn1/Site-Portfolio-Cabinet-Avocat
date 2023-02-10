@@ -1,0 +1,68 @@
+.layoutMain {
+    height: 100vh!important;
+    margin-bottom: 200px!important;
+}
+
+.bgWhite {
+    background-color: #fff;
+}
+
+h2 {
+    color: var(--color-style2);
+}
+
+h1 {
+    margin-top: 100px;
+    font-size: 80px;
+    color: var(--color-bg-nav);
+}
+
+i {
+    color: var(--color-style2);
+}
+
+span {
+    font-family: 'Alexandria', sans-serif;
+}
+
+.layoutCard {
+    margin-top: 100px;
+    padding-bottom: 10px;
+}
+
+.contactFiche {
+    margin-top: 100px;
+    background-color: #22333b;
+    margin-left: 100px;
+}
+
+#hidden{
+    display: none!important;
+    background-color: #fff;
+}
+
+#lineDesign{
+    height: 25px!important;
+    width: 100%!important;
+    background-color: var(--color-bg-nav)!important;
+    padding: 0px!important;
+}
+
+.blop{
+    max-height: 250px;
+}
+
+/****************************************************************************************************/
+
+@media screen and (max-width: 900px) {
+    #contactMediaQuerie{
+        width: 80% ;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #adressMediaQuerie{
+        width: 80% ;
+        margin-left: 0px;
+    }
+}

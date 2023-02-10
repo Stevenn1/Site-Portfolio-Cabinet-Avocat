@@ -1,0 +1,14 @@
+#layoutCreate {
+    height: 100vh;
+}
+
+.widthRowCategory{
+    width: 150px;
+}
+
+@media screen and (max-width: 900px) {
+    #editPageMediaQuerie{
+        width: 90%;
+    }
+    
+}

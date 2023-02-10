@@ -1,0 +1,55 @@
+#layoutLog {
+    height: 100vh;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+.form-error-icon {
+    background-color: red!important;
+}
+
+#test{
+    margin-bottom: 0!important;
+}
+
+.customButton{
+    background-color: var(--color-bg-nav)!important;
+    color: var(--writeColor)!important;
+}
+
+#disconnectButton{
+    background-color: var(--color-bg-nav)!important;
+}
+
+#subscriptionBadge{
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+#subscriptionBadge:hover{
+    background-color: var(--color-style2)!important;
+    color: var(--writeColor)!important;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 715px) {
+    #loginMediaQuerie{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    #subscriptionMediaQuerie{
+        width:80%;
+    }
+    .widthField {
+        width: 200px;
+    }
+    .columnMediaQuerie{
+        display: flex;
+        flex-direction: column;
+    }
+}
+

@@ -1,0 +1,185 @@
+:root {
+    --color-bg-nav:#22333b;
+    --color-writing: #393E41;
+    --color-bgMain:#FDFFF7;
+    --color-bg-card: #5f4930;
+    --color-style2: #7A542E;
+    --writeColor: #fff;
+    --color-whiteDepan: #fff; 
+
+    --margin-l: 100px;
+    --margin-r: 100px;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+@media screen and (max-width: 1343px) {
+    #messageFlashMediaQuerie{
+        width: 100%!important;
+    }
+}
+
+#vh{
+    height: 100vh;
+}
+
+#connected {
+    color: #32CD32!important;
+    height: 30px;
+    width: 30px;
+}
+
+#noConnected {
+    color: var(--color-whiteDepan);
+    height: 30px;
+    width: 30px;
+}
+
+.writeColorNav {
+    color: var(--color-bg-nav)!important;
+}
+
+.colorWhite{
+    color: var(--writeColor)!important;
+}
+
+.colorStyle2{
+    color: var(--color-style2);
+}
+
+.bgNav {
+    background-color: var(--color-bg-nav)!important;
+}
+
+.contentArticleH{
+    height: 200px!important;
+}
+.bgStyle2 {
+    background-color: var(--color-style2);
+}
+
+#iconColor {
+    color: var(--color-bg-nav);
+}
+
+h1, h2, h3 {
+    font-family: 'Alexandria', sans-serif;
+}
+
+#titleIcons {
+    font-weight:bold!important;
+    color: var(--color-bg-nav)!important;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Anton', sans-serif;
+}
+
+p, h2, h3, h4 {
+    color: black;
+}
+
+li > a, a > i, div > h4, a > p { /****** <= couleur d'ecriture de la barre nav et du footer ******/
+    color: var(--color-whiteDepan)!important;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 7px;
+}
+
+body, html{
+    font-family: 'Roboto', sans-serif!important;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    height: 100vh!important;
+}
+
+.navBarStyle {
+    bottom: 0;
+}
+
+a {
+    text-decoration: none!important;
+    color: var(--color-writing)!important;
+}
+
+.bgCards {
+    background-color: var(--color-bg-nav)!important;
+}
+
+.colorCards {
+    color: var(--color-whiteDepan);
+}
+
+
+/************************* TEST *************************/
+
+#footer{
+    background-color: var(--color-bg-nav);
+}
+
+#marginGutter {
+    margin-left: var(--margin-l) ;
+    margin-right: var(--margin-r) ;
+}
+
+#layoutMain {
+    padding-top: 75px!important;
+    background-color: var(--color-bg-cards-blue); /************************* je ne comprend pas cette ligne ***********/
+    
+}
+
+#wi {
+    width: 200px!important;
+}
+
+/**************************** ANCRE ****************************************/
+.anchor{
+    display: block;
+    height: 85px;
+    margin-top: -85px;
+    visibility: hidden;
+}
+
+/*************************** TEST NAV BAR DROPDOWN*/
+li>a>h4{
+    color: var(--color-style2);
+}
+
+li>a:hover {
+    background-color: var(--color-bg-nav)!important;
+}
+
+a:hover{
+    color: var(--color-style2)!important;
+}
+
+h4:hover{
+    color: var(--color-whiteDepan);
+}
+
+#connexion:hover{
+    color: var(--color-style2)!important;
+}
+
+#downMenu{
+    padding-bottom: 0;
+}
+
+#svgIcon {
+    stroke-width: 5!important;
+border: 5px;
+}
+
+svg:hover {
+    fill: var(--color-style2)!important;
+}
+
+a>i:hover {
+    color: var(--color-style2)!important;
+}

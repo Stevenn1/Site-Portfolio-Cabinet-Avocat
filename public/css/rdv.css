@@ -1,0 +1,15 @@
+#layoutConfirmation {
+    height: 100vh;
+}
+
+#layoutRdv {
+    height: 100vh;
+}
+
+h2 {
+    color: var(--color-bg-nav);
+}
+
+#cardLayout {
+    padding-top: 150px!important;
+}

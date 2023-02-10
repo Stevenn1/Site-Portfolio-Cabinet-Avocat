@@ -1,0 +1,12 @@
+h1 {
+    font-size: 55px;
+    color: var(--color-bg-nav);
+}
+
+.listDisc {
+    list-style: disc;
+}
+
+#layoutCardAide {
+    margin-top: 80px!important;
+}

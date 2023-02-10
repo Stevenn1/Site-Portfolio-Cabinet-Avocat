@@ -1,0 +1,114 @@
+:root {
+    --writeColor: #fff;
+}
+/**** bgdetest and layout card replytest*****/
+.bgReply {
+    background-color:aqua!important;
+}
+.bgReply2 {
+    background-color: var(--color-style2)!important;
+}
+
+.colorWhite{
+    color: var(--writeColor);
+}
+
+.colorWhite{
+    color: var(--color-bgMain);
+}
+
+.colorBgNav{
+    color: var(--color-bg-nav);
+}
+
+.card-body{
+    padding: 0px;
+}
+
+.lineDesign{
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-style2);
+    left: 0;
+}
+
+#LayoutReply{
+    margin-left: 50px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+
+form{
+    background-color: var(--color-bg-nav);
+    padding: 20px!important;
+    color: var(--color-bgMain);
+}
+
+/**********/
+.writeColor{
+    color: var(--color-bg-nav);
+    font-weight: bold;
+    font-size:45px;
+}
+
+h4, h2 {
+
+}
+
+.layoutArticle {
+    margin-top: 100px!important;
+}
+
+.bgComment {
+    background-color: var(--color-bgMain);
+}
+
+.cardComment {
+    border: 0 solid #b8c5cb;
+    border-radius: 5px;
+    background-color: var(--color-bg-nav);
+    margin-bottom: 20px;
+}
+
+#iconStyle {
+    font-size: 30px;
+    color: var(--color-bgMain);
+}
+section{
+    margin-right: 30px;
+    margin-left: 20px;
+
+}
+#comment {
+    margin-top: 50px;
+    padding-top: 30px;
+}
+/*******************************************************************************************************/
+@media screen and (max-width: 795px) {
+    .cardComment{
+        width: 100%!important;
+    }
+    #layoutCommentPart{
+        width: 500px!important;
+        margin-left: 20px!important;
+        padding-left: 0px!important;
+    }
+    #LayoutReply{
+        width:80%!important;
+        padding-right: 5px;
+    }
+    .marginMediaQuerie{
+        padding-left: 5px!important;
+    }
+}
+
+#layoutCommentPart{
+    width: 800px!important;
+}
+
+@media screen and (max-width: 790px) {
+    .articleMediaQuerie{
+        width: 80%!important;
+    }
+}

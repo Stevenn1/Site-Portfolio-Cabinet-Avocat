@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/footerLink.css">
+{% endblock %}
+
+{% block title %}Maitre " ADMINISTRATEUR " | Aides {% endblock %}
+
+{% block body %}
+
+<div class="row d-flex justify-content-center">
+    <div class="col-10 mb-5 vh-100">
+
+        <h1 class="text-center mb-5 mt-5 text-decoration-underline">Aide</h1>
+
+        <div class="card" id="layoutCardAide">
+            <div class="card-header bgNav">
+                <h2 class="colorWhite">Demande d'aides</h2>
+            </div>
+
+            <div class="card-body">
+                <p>
+                    Nous sommes là pour vous aider!
+                </p>
+                <p>
+                    Si vous rencontrez un problème ou avez des questions concernant notre site, n'hésitez pas à nous contacter. Nous sommes à votre disposition pour vous aider à résoudre tout problème que vous pourriez rencontrer. Vous pouvez nous joindre facilement à l'adresse mail suivante : <span class="fw-bold">[ADRESSE MAIL]</span> Nous sommes disponibles pour vous aider à tout moment et nous ferons de notre mieux pour vous fournir une assistance rapide et efficace. Nous sommes toujours heureux de vous entendre et de vous aider à tirer le meilleur parti de notre site.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/rdv.css">
+{% endblock %}
+
+{% block title %}Confirmation de rendez-vous{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid" id="layoutConfirmation">
+        <div class="row d-flex justify-content-center" id="cardLayout">
+            <div class="card col-5 p-0">
+
+                <div class="card-header bgNav">
+                    <h1 class="text-center colorWhite">Rendez-vous confirmé !</h1>
+                </div>
+
+                <div class="card-body">
+                    <h2 class="text-decoration-underline pb-2">Vérifier votre boite mail</h2>
+                    <p>Votre rendez-vous a bien été pris en compte, <br> veuillez vérifier votre boite de réception un email vous à été envoyé</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

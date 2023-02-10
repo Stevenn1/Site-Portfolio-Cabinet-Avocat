@@ -1,0 +1,12 @@
+controllers:
+  resource: ../src/Controller/
+  type: annotation
+
+kernel:
+  resource: ../src/Kernel.php
+  type: annotation
+
+delete_reply:
+  path: /reply/{id}/delete
+  controller: App\Controller\Admin\BlogController::deleteReply
+  methods: [POST]

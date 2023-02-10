@@ -1,0 +1,63 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/createArticle.css">
+{% endblock %}
+
+{% block title %}Maitre " ADMINISTRATEUR " | Création d'articles{% endblock %}
+
+{% form_theme formArticle 'bootstrap_5_layout.html.twig' %}
+
+{% block body %}
+
+<div class="container-fluid" id="layoutMain">
+    <div class="row d-flex justify-content-center mb-5">
+        <div class="col-7" id="editPageMediaQuerie">
+
+            <div class="col-6 m-auto rounded bgStyle2 p-1 mb-4">
+
+                <h1 class="text-center colorWhite">
+                    {% if editMode %}
+                        Modification de l'article
+                    {% else %}
+                        Création de l'article
+                    {% endif %}
+                </h1>
+
+            </div>
+            
+            <div class="row p-2 d-flex justify-content-center bg-light">
+
+                {{ form_start(formArticle) }}
+                <div class="w-75">
+                    {{ form_row(formArticle.title) }}
+                </div>
+
+                <div class="widthRowCategory">
+                    {{ form_row(formArticle.category)}}
+                </div>
+
+                <div>
+                    {{ form_row(formArticle.content) }}
+                </div>
+
+                <div class="w-50">
+                    {{ form_row(formArticle.imageFile) }}
+                </div>
+
+                <button type="submit" class="btn btn-success">
+                    {% if editMode %}
+                        Enregistrer les modifications
+                    {% else %}
+                        Ajouter l'article
+                    {% endif %}
+                </button>
+                {{ form_end(formArticle)}}
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

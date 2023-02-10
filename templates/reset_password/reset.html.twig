@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/resetPassword.css">
+{% endblock %}
+
+{% block title %}Réinitialiser votre mot de passe{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid d-flex justify-content-center align-items-center layoutCenterPage" id="vh">
+        <div class="row d-flex justify-content-center" id="resetMediaQuerie">
+            <div class="card col p-0 mt-0">
+
+                <div class="card-header mb-2" id="CustomCardHeader">
+                    <h1 class="text-center">Réinitialiser votre mot de passe</h1>
+                </div>
+
+                {{ form_start(resetForm) }}
+                    <div class="col-9 ps-2">
+                        {{ form_row(resetForm.plainPassword) }}
+                    </div>
+
+                    <button class="btn btn-primary ms-2 mt-3 mb-2">Réinitialiser</button>
+                {{ form_end(resetForm) }}
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

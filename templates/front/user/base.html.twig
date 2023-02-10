@@ -1,0 +1,21 @@
+{% extends '/base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/css/login.css">
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid d-flex justify-content-center justify-content-evenly align-items-center" id="layoutLog">
+        <div class="row w-25">
+            <div class="col-12">
+
+            {% block heading %}{% endblock %}
+
+                <div class="card p-3">
+                    {% block content %}{% endblock %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/admin/contact.css">
+{% endblock %}
+
+{% block title %} Messagerie {% endblock %}
+
+{% block body %}
+
+    <div class="row d-flex justify-content-center" id="PositionCardMain">
+        <div class="col-7" id="showMessageMediaQuerie">
+
+            <div class="card  p-2 mb-4">
+
+                <div class="card-header bgColor1 bg-gradient">
+                    <p class="mb-0 text-white"><span class="fw-bold text-decoration-underline">
+                        Message de</span> : <span class="fs-5">{{ contact.firstname }} {{ contact.name }}</span>
+                    </p>
+
+                    <p class="mb-0 text-white"><span class="fw-bold text-decoration-underline">
+                        Email</span> : <span class="text-muted"> {{contact.email}}</span>
+                    </p>
+                    <p class="mb-0 text-white"><span class="fw-bold text-decoration-underline">
+                        Reçu le</span> : <span class="text-muted"> {{ contact.createdAt | date('d/m/y') }} à {{ contact.createdAt | date('H:i') }}</span>
+                    </p>
+                </div>
+
+                <div class="p-2 ps-3 bgColor2 text-white">
+                    <p class="mb-0 text-white">
+                        <span class="fw-bold text-decoration-underline">Objet</span> : <span> {{ contact.subject}}</span>
+                    </p>
+                </div>
+
+                <div class="p-3 bg-light rounded-bottom">
+                    <p>{{ contact.message }}</p>
+                </div>
+
+                <div class="col d-flex">
+                    <button type="button" class="btn btn-danger buttonMessageMediaQuerie mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Supprimer le message
+                    </button>
+                    
+                    <button class="btn btn-info buttonMessageMediaQuerie ms-3 mt-2">
+                        <a href="{{path('admin_contact_checked', { 'id': contact.id}) }}">traiter le message</a>
+                    </button>
+                </div>
+
+                {# Modal pour la suppression du message #}
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Suppression de l'article</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Souhaitez-vous vraiment supprimer l'article ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+
+                        <button class="btn btn-danger">
+                            <a href="{{path('admin_contact_remove', { 'id': contact.id}) }}" class="colorWhite">Supprimer</a>
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+                <div>
+                    <button class="btn bg-gradient" id="buttonCustom">
+                        <a href="{{path('admin_contact')}}" class="colorWhite">Retour</a>
+                    </button>
+                </div>
+        </div>
+    </div>
+
+{% endblock %}

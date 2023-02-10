@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+    <li class="nav-item">
+        <a class="nav-link fs-5" href="{{ path('admin_blog_create') }}">Créer un article</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link fs-5" href="{{ path('admin_contact') }}">Messagerie</a>
+    </li>
+
+{% endblock %}

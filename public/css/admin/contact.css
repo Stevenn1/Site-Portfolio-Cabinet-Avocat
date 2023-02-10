@@ -1,0 +1,78 @@
+#containerMain {
+    height: 100vh!important;
+}
+
+#PositionCardMain{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+h1{
+    font-size: 60px;
+}
+
+.bgColor1{
+    background-color: var(--color-bg-nav)!important;
+}
+
+.bgColor2{
+    background-color: var(--color-style2)!important;
+}
+
+#buttonCustom{
+    background-color: var(--color-bg-nav);
+    color: var(--color-whiteDepan);
+}
+
+#buttonCustom:hover{
+    color: var(--color-style2);
+}
+
+/****************** Paginator *************/
+
+.page-link {
+    background-color: var(--color-bg-nav);
+}
+
+.page-link:hover {
+    color: var(--color-whiteDepan)!important;
+    background-color: var(--color-style2)!important;
+}
+
+#nav-category{
+    background-color: var(--color-bg-nav);
+}
+
+#nav-category2{
+    background-color: var(--color-style2);
+}
+
+/*****************************************/
+
+@media screen and (max-width: 640px) {
+    #messagerieMediaQuerie {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #messagerieTitleMediaQuerie {
+        width: 70%;
+    }
+    h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1290px) {
+    #showMessageMediaQuerie {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .buttonMessageMediaQuerie {
+        width: 185px!important;
+        padding: 0;
+    }
+}

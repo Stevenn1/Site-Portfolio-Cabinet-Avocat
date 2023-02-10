@@ -1,0 +1,148 @@
+.carousel-indicators{
+    margin-bottom: 2rem;
+}
+
+.carousel-caption {
+    margin-bottom: 45px;
+}
+
+/****** icon ******/
+#iconColor{
+    color: var(--color-bg-nav)!important;
+}
+
+#titleIcons{
+    color: var(--color-bg-nav)!important;
+}
+
+#titleIconsButton{
+    background-color: var(--color-bg-nav)!important;
+    color: var(--color-whiteDepan)!important;
+}
+
+#titleIconsButton:hover{
+    background-color: var(--color-style2)!important;
+    color: var(--color-whiteDepan)!important;
+}
+
+h5 ~ p {
+    color: var(--color-whiteDepan);
+}
+
+.mainContainer {
+margin-right: 100px;
+margin-left: 100px;
+}
+
+body {
+    background-color: var(--color-bgMain);
+    height: 100%;
+}
+
+.c-item {
+    height: 900px;
+}
+
+.c-img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+#positionAncreIndex{
+    position: relative!important;
+    left: 300px!important;
+    margin-bottom: 10px;
+}
+
+svg:hover{
+    fill: var(--color-style2)!important;
+}
+i {
+    color: var(--color-writing);
+    font-size: 25px;
+}
+
+.hrLogo {
+    width: 800px;
+    background-color: var(--color-writing);
+    height: 2px;
+    margin-bottom: 50px;
+}
+
+.layoutCard{
+    margin-top: 150px;
+}
+
+#cards {
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.30),
+    0 5px 15px 0 rgba(0,0,0,0.08);
+}
+#intro {
+    margin-top: 100px;
+}
+#cardIndex {
+    width: 80%;
+    margin-bottom: 100px;
+}
+/**************************************  TEST CARDS *************************************/
+.designCard {
+    width: 600px;
+}
+
+.designCard2 {
+    width: 600px;
+}
+
+/************************************** TEST 1 position absolute *****************************/
+
+.imgRounded {
+    border-radius: 100%!important;
+}
+
+#test {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.c-item {
+    height: 100vh!important;
+}
+/**************************************** FIN DE TEST CARDS ****************************/
+#hr{
+    height: 2px!important;
+    background-color: var(--color-whiteDepan);
+}
+
+#layoutMain {
+    margin-top: -100px!important;
+
+}
+
+.titleMain {
+    background-color: var(--color-bg-nav);
+    color: var(--color-whiteDepan);
+    margin-bottom: 20px!important;
+
+}
+
+.h1Main{
+    color: var(--color-whiteDepan);
+}
+
+.colorWhite {
+    color: var(--color-whiteDepan);
+    font-weight: 200;
+}
+
+/*******************menu diplome ***************************/
+
+#dropdownMenu{
+    background-color: var(--color-bg-nav)!important;
+}
+
+/************************* RESPONSIVITE ********************/
+
+#introMinWidth{
+    min
+}

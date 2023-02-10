@@ -1,0 +1,57 @@
+{% extends 'front/user/base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/css/login.css">
+{% endblock %}
+
+{% block title%}Maitre " ADMINISTRATEUR " | S'inscrire{% endblock %}
+
+{% block body %}
+
+
+    <div class="row d-flex justify-content-center align-items-center" id="layoutLog" >
+        <div class="col-5 bgNav p-3" id="subscriptionMediaQuerie">
+
+            <h1 class="text-center colorWhite"> Inscription </h1>
+
+            {% if app.user %}
+                <div class="alert alert-primary" role="alert">
+                    <h4 class="alert-heading writeColorNav ">Vous êtes déjà inscrit!</h4>
+                    <p>
+                        Oops, si vous voyez ce message c'est que vous êtes déjà inscrit. Si vous souhaitez vous désinscrire veuillez suivre ce lien ci-dessous.
+                    </p>
+
+                    <hr>
+
+                    <p class="mb-0">
+                        Etes-vous sûr de vouloir vous désinscrire?
+                    </p>
+
+                    <button type="button" class="btn btn-sm btn-light me-3 mt-2">OUI</button>
+                    <button type="button" class="btn btn-sm btn-light mt-2">NON</button>
+                </div>
+
+            {% else %}
+                <div class="bgNav">
+                    <div class="card p-3">
+
+                    {{ form_start(form) }}
+                        <div class="d-flex columnMediaQuerie">
+                            <div class="col-4 me-4 widthField">{{ form_row(form.name)}}</div>
+                            <div class="col-4 widthField">{{ form_row(form.firstname)}}</div>
+                        </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="col-4">{{ form_row(form.username)}}</div>
+                                <div class="col-7">{{ form_row(form.email)}}</div>
+                            </div>
+                            <div>{{ form_row(form.password)}}</div>
+                    {{ form_end(form) }}
+
+                    </div>
+                </div>
+            {% endif %}
+            
+        </div>
+    </div>
+
+{% endblock %}

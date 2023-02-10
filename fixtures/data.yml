@@ -1,0 +1,110 @@
+App\Entity\Category:
+  Droit:
+    title: "Droit"
+    description: "<sentence()>"
+    slug: "droit"
+    # articles:
+    #   [
+    #     "@article_1",
+    #     "@article_2",
+    #     "@article_3",
+    #     "@article_4",
+    #     "@article_5",
+    #     "@article_6",
+    #     "@article_7",
+    #     "@article_8",
+    #     "@article_9",
+    #     "@article_10",
+    #   ]
+
+Economie:
+  title: "Économie"
+  description: "<sentence()>"
+  slug: "économie"
+  # articles:
+  #   [
+  #     "@article_1",
+  #     "@article_2",
+  #     "@article_3",
+  #     "@article_4",
+  #     "@article_5",
+  #     "@article_6",
+  #     "@article_7",
+  #     "@article_8",
+  #     "@article_9",
+  #     "@article_10",
+  #   ]
+
+Sociale:
+  title: "Sociale"
+  description: "<sentence()>"
+  slug: "sociale"
+  # articles:
+  #   [
+  #     "@article_1",
+  #     "@article_2",
+  #     "@article_3",
+  #     "@article_4",
+  #     "@article_5",
+  #     "@article_6",
+  #     "@article_7",
+  #     "@article_8",
+  #     "@article_9",
+  #     "@article_10",
+  #   ]
+
+# App\Entity\Article:
+#   article_{1..10}:
+#     title: "<word()>"
+#     Content: "<paragraph(30)>"
+#     image: "<imageURL(350, 150, 'animals', true)>"
+#     createdAt: <dateTime()>
+#     image_name: "fake.png"
+#     comments:
+#       [
+#         "@comment_1",
+#         "@comment_2",
+#         "@comment_3",
+#         "@comment_4",
+#         "@comment_5",
+#         "@comment_6",
+#         "@comment_7",
+#         "@comment_8",
+#         "@comment_9",
+#         "@comment_10",
+#       ]
+
+# App\Entity\Comment:
+#   comment_{1..10}:
+#     author: "<lastname()>"
+#     content: "<sentence()>"
+#     createdAt: <dateTime()>
+#     email: '<current()>\@example.org'
+#     rgpd: true
+
+app\Entity\Contact:
+  contact_{1..10}:
+    name: "<lastname()>"
+    firstname: "<lastname()>"
+    email: '<current()>\@example.org'
+    message: "<paragraph(30)>"
+    subject: "<sentence()>"
+    rgpd: true
+    createdAt: <dateTime()>
+
+app\Entity\User:
+  user:
+    name: "<lastname()>"
+    firstname: "<firstname()>"
+    username: "User01"
+    email: user@mail.fr
+    roles: ["ROLE_USER"]
+    password: \$2y\$13\$mZItrVPO1Y6UxZuiql.fyuIxEt28HX4Dj39JJh5YZH.FLSOrL9s8W
+
+  admin:
+    name: "Admin"
+    firstname: "Compte"
+    username: "Administrateur"
+    email: administrateur@email.fr
+    roles: ["ROLE_ADMIN"]
+    password: \$2y\$13\$mZItrVPO1Y6UxZuiql.fyuIxEt28HX4Dj39JJh5YZH.FLSOrL9s8W

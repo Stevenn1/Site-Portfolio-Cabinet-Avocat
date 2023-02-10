@@ -1,0 +1,164 @@
+:root {
+    --color-whiteDepan: #fff;
+    --color-bgHeading: #58641D;
+    --color-writing: #393E41;
+    --bg-blog: #162019;
+    --bs-pagination-bg: #7A542E;
+}
+
+.colorWhite {
+    color: var(--color-whiteDepan);
+}
+
+.colorBgNav{
+    color: var(--color-bg-nav);
+}
+
+.bgNav{
+    background-color: var(--color-bg-nav)!important;
+}
+
+.bgButton {
+    background-color: var(--color-bgMain)!important;
+    display: inline;
+    
+}
+
+#h1Style {
+    font-size: 100px!important;
+    font-weight: 400;
+}
+#ContentBlog {
+    margin-top: 100px;
+}
+
+h2 {
+    text-decoration: underline solid var(--color-whiteDepan) 2px;
+    font-size: 30px!important;
+    color: var(--bg-blog);
+}
+
+#test {
+    background-color: var(--color-bgMain);
+}
+
+.bgCards {
+    background-color: #7A542E!important;
+}
+
+.wCard {
+    width: 500px!important;
+}
+
+#widthTextIntro{
+    max-width: 65%;
+    margin: auto;
+}
+/* #positonCards {
+    margin-top: 90px!important;
+    justify-content: center!important;
+} */
+
+.bgBlogTest {
+    background-color: var(--color-bgMain);
+}
+
+#h1Style {
+    font-size: 70px!important;
+    color: var(--color-bg-nav);
+}
+
+.title {
+    margin: auto;
+}
+
+.styleLineRight {
+    height: 3px!important;
+    background-color: var(--color-bg-nav);
+}
+.styleLineLeft {
+    height: 3px!important;
+    background-color: var(--color-bg-nav);
+}
+
+.styleLine2 {
+    height: 3px!important;
+    background-color: var(--color-bg-nav);
+}
+
+a>button:hover {
+    background-color: var(--color-bg-nav)!important;
+    color: var(--color-whiteDepan)!important;
+    border: 0;
+}
+
+/****************************TEST PAGINATION (ok)*********************/
+
+.page-link {
+    background-color: var(--color-bg-nav);
+}
+
+.page-link:hover {
+    color: var(--color-whiteDepan)!important;
+    background-color: var(--color-style2)!important;
+}
+
+#nav-category{
+    background-color: var(--color-bg-nav);
+}
+
+#nav-category2{
+    background-color: var(--color-style2);
+}
+
+/************************** TEST LAYOUT NAVSEARCH **********************/
+
+#LayoutSearch {
+    padding-left: 30px;
+    padding-right: 0;
+    width: 300px;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+h4 {
+    color: var(--color-bg-nav)!important;
+}
+
+form {
+    margin-bottom: 48px;
+    padding: 5px;
+}
+
+form>button {
+    background-color: var(--color-style2)!important;
+    border: 0!important;
+}
+
+form>button:hover {
+    background-color: var(--color-bg-nav)!important;
+}
+
+.positionByMe {
+    top: 30%;
+}
+
+#filterButton {
+    background-color: var(--color-style2);
+    border: 0;
+}
+
+#filterButton:hover{
+    background-color: var(--color-bg-nav)!important;
+}
+
+img {
+    height: 100%!important;
+}
+
+@media screen and (max-width: 1720px) {
+    .cardMediaQuerie {
+        display: flex!important;
+        justify-content: space-evenly!important;
+    }
+}
